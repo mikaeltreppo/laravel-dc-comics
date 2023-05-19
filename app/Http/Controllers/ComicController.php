@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -72,7 +72,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
