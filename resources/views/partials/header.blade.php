@@ -13,13 +13,13 @@
               Dropdown
             </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Add Comic</a></li>
+                    <li><a class="dropdown-item" href="{{route('comics.create')}}">Add Comic</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Delete comic</a></li>
                 </ul>
            </li> 
            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('comics.index')}}">Vedi i Fumetti</a>

@@ -1,21 +1,40 @@
 @extends('layouts.app')
 @section('content')
+<!--metodo e action-->
 <form method="POST" action="{{route('comics.store')}}">
-    <div class="mb-3">
-        <label for="url" class="form-label">URL dell'immagine</label>
-        <input type="password" class="form-control" id="url">
-      </div>
-    <div class="mb-3">
+<!--csrf per evitare errore 419 per autenticazione-->
+    @csrf
+     <div class="mb-3">
       <label for="title" class="form-label">Titolo</label>
-      <input type="password" class="form-control" id="title">
+      <input type="text" class="form-control" id="title" name="title">
     </div>
     <div class="mb-3">
-        <label for="data" class="form-label">Data</label>
-        <input type="password" class="form-control" id="data">
+      <label for="description" class="form-label">Descrizione</label>
+      <input type="text" class="form-control" id="description" name="description">
+    </div>
+    <div class="mb-3">
+        <label for="url" class="form-label">URL dell'immagine</label>
+        <input type="text" class="form-control" id="url" name="url">
+      </div>
+    <div class="mb-3">
+      <label for="thumb" class="form-label">Titolo</label>
+      <input type="text" class="form-control" id="thumb" name="thumb">
+    </div>
+    <div class="mb-3">
+        <label for="sale_date" class="form-label">Data</label>
+        <input type="text" class="form-control" id="sale_date" name="sale_date"> 
       </div>
       <div class="mb-3">
-        <label for="prezzo" class="form-label">Prezzo</label>
-        <input type="password" class="form-control" id="prezzo">
+        <label for="price" class="form-label">Prezzo</label>
+        <input type="text" class="form-control" id="price" name="price">
+      </div>
+      <div class="mb-3">
+        <label for="type" class="form-label">Tipologia</label>
+        <input type="text" class="form-control" id="type" name="type">
+      </div>
+      <div class="mb-3">
+        <label for="series" class="form-label">Serie</label>
+        <input type="text" class="form-control" id="series" name="series">
       </div>
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
