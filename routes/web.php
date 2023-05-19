@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +15,7 @@ use App\Http\Controllers\AppController;
 |
 */
 
+Route::get('/', [AppController::class, 'cards']);
+//gia creata con la riga 21 insieme ad altre 5 Route::get('/cards',[ComicController::class, 'index']);
 
-Route::get('/', [AppController::class, 'index']);
+Route::resource('comics', ComicController::class);

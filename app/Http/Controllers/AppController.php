@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    public function index() {
+    public function cards() {
         $comics = Comic::all();
-        return view('layouts\app', compact('comics'));}
+        return view('layouts/app', compact('comics'));}
+
+     
 }
