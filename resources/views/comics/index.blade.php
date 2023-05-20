@@ -14,7 +14,8 @@
             <li class="list-group-item text-center">Price: £{{$comic->price}}</li>
             <li class="list-group-item text-center">Date: {{$comic->sale_date}}</li>
             <li class="list-group-item text-center">Series: {{$comic->series}}</li>
-            <li class="list-group-item text-center"><a type="button" class="btn btn-info" href="{{route('comics.show', ['comic' => $comic->id])}}">Info</a></li>
+            <li class="list-group-item text-center"><a type="button" class="btn btn-info" href="{{route('comics.show', ['comic' => $comic->id])}}">Info</a><a type="button" class="btn btn-warning m-2" href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica</a></li>
+
        
           </ul>
          
