@@ -14,9 +14,19 @@
             <li class="list-group-item text-center">Price: £{{$comic->price}}</li>
             <li class="list-group-item text-center">Date: {{$comic->sale_date}}</li>
             <li class="list-group-item text-center">Series: {{$comic->series}}</li>
-            <li class="list-group-item text-center"><a type="button" class="btn btn-info" href="{{route('comics.show', ['comic' => $comic->id])}}">Info</a><a type="button" class="btn btn-warning m-2" href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica</a></li>
-
-       
+            <li class="list-group-item text-center">
+              <a type="button" class="btn btn-info" href="{{route('comics.show', ['comic' => $comic->id])}}">Info</a>
+              <a type="button" class="btn btn-warning m-2" href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica</a>
+              <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Cancella</button>
+              
+              
+              </form>        
+               </li>
+            
+            
           </ul>
          
         </div>

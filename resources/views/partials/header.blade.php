@@ -10,12 +10,11 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Aggiungi
             </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{route('comics.create')}}">Add Comic</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Delete comic</a></li>
+                    
                 </ul>
            </li> 
            <li class="nav-item">

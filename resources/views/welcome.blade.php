@@ -17,7 +17,7 @@
 
 <body>
 
-   <button> <a href="/cards"> clicca per vedere i fumetti</a></button>
+   <button> <a href="{{route('comics.index')}}"> clicca per vedere i fumetti</a></button>
 
 </body>
 
