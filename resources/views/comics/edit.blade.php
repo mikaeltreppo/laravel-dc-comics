@@ -1,9 +1,17 @@
 @extends('layouts.app')
 @section('content')
 <!--metodo e action-->
-<form method="POST" action="{{route('comics.store')}}">
+<form method="POST" action="{{route('comics.update', ['comic' => $comic->id])}}">
+
+
+
 <!--csrf per evitare errore 419 per autenticazione-->
     @csrf
+
+
+
+    @method('PUT')
+
      <div class="mb-3">
       <label for="title" class="form-label">Titolo</label>
       <input type="text" class="form-control" id="title" name="title" value="{{$comic->title}}">
