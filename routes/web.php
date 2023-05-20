@@ -15,7 +15,7 @@ use App\Http\Controllers\AppController;
 |
 */
 
-
+Route::get('/', [AppController::class, 'cards']);
 //gia creata con la riga 21 insieme ad altre 5 Route::get('/cards',[ComicController::class, 'index']);
 
 Route::resource('comics', ComicController::class);
