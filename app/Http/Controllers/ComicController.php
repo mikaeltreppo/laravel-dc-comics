@@ -40,8 +40,7 @@ class ComicController extends Controller
 
         $request->validate([
             'title' => 'required|max:50',
-            'description' => 'required|max:255',
-            'url'=> 'required|200',
+            'description' => 'required|max:2550',
             'thumb' => 'required|max:255',
             'price' => 'required|max:50',
             'series' => 'required|max:50',
@@ -99,7 +98,18 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+
+        $request->validate([
+            'title' => 'required|max:50',
+            'description' => 'required|max:2550',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:50',
+            'series' => 'required|max:50',
+            'sale_date' => 'required|max:90',
+            'type' => 'nullable|max:25'
+        ]);
+
         $comic = Comic::findOrFail($id);
         $form_taken = $request->all();
         $comic->update($form_taken);
