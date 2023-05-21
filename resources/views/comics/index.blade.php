@@ -4,7 +4,9 @@
 <!--il @ section('nome definito nell'layouts affianco allo @ yield('qui')')-->
 <body>
     <div class="container d-flex flex-wrap justify-content-center">
+
       @foreach ($comics as $comic)
+
       <div class="card m-3" style="width: 13rem;">
           <img src="{{$comic->thumb}}" class="card-img-top" alt="immagine ">
           <div class="card-body overflow-auto">
@@ -30,7 +32,9 @@
           </ul>
          
         </div>
+
       @endforeach
+      
     </div>
   </body>
   @endsection
